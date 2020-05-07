@@ -1,4 +1,5 @@
-##Install Xampp 
+#Install Xampp..
+
 *For phpmyadmin, sql and apache.
 *For database creation and manipulation
 
