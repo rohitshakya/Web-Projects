@@ -1,2 +1,2 @@
 # Web-Project
-Web Project for learning process
+Web Project for learning purpose
