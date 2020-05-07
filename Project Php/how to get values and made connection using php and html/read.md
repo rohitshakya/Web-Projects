@@ -1,9 +1,9 @@
-#Install Xampp..
+# Install Xampp..
 
-*For phpmyadmin, sql and apache.
-*For database creation and manipulation
+* For phpmyadmin, sql and apache.
+* For database creation and manipulation
 
-##Every file will be put into htdocs folder ie.( C:\xampp\htdocs )
+## Every file will be put into htdocs folder ie.( C:\xampp\htdocs )
 # To create connection default setting will be:-
 <?php
 $servername = "localhost";
