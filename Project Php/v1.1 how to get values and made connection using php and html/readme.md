@@ -7,6 +7,7 @@
 * Learn Sql queries for database manipulations
 ## Every file will be put into htdocs folder ie.( C:\xampp\htdocs )
 ### Default settings will be
+* Turn on apache and mysql from xammp control panel  
 `<?php`   
 `$servername = "localhost";`    
 `$dbusername = "root";`    
