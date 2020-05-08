@@ -8,9 +8,9 @@
 ## Every file will be put into htdocs folder ie.( C:\xampp\htdocs )
 ### Default settings will be
 `<?php`   
-`$servername = "localhost";  
-$dbusername = "root";  
-$password = "";  
-// Create connection  
-$conn = new mysqli($servername, $dbusername, $password);  
-?>`  
+`$servername = "localhost";`    
+`$dbusername = "root";`    
+`$password = "";`    
+`// Create connection`    
+`$conn = new mysqli($servername, $dbusername, $password);`    
+`?>`  
