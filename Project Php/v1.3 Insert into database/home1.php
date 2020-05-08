@@ -1,3 +1,10 @@
+<!--
+ * Author : Rohit Shakya
+ * Date   : May-2020
+ * Editor : Sublime text
+ * Local server: Xampp
+ * title : Insert into database 
+ -->
 <!DOCTYPE html>
 <html>
 <head>

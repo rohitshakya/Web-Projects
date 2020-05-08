@@ -1,3 +1,10 @@
+<!--
+ * Author : Rohit Shakya
+ * Date   : May-2020
+ * Editor : Sublime text
+ * Local server: Xampp
+ * title : Function and loop in php 
+ -->
 <?php
 $servername = "localhost";
 $dbusername = "root";

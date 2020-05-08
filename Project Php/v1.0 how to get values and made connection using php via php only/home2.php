@@ -1,4 +1,10 @@
-
+<!--
+ * Author : Rohit Shakya
+ * Date   : May-2020
+ * Editor : Sublime text
+ * Local server: Xampp
+ * title : Connection with database  
+ -->
 <form action="" method="POST">
   Name:<br>
   <input type="text" name="name" >
