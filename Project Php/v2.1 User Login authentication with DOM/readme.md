@@ -1,3 +1,4 @@
+#### User login authentication system which shows newsfeed after the successfull authentication based on document object model.  
 ### Install Xampp for project php
 
 * For phpmyadmin, sql and apache.
