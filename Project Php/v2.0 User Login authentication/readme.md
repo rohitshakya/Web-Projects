@@ -15,8 +15,8 @@
 `$password = "";`    
 `// Create connection`    
 `$conn = new mysqli($servername, $dbusername, $password);`    
-`?>`  
-`header('Location: xyz.html'); is used`  
+`?>`    
+* `header('Location: xyz.html'); is used`  
   
   
 
