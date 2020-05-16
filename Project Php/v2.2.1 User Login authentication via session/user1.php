@@ -3,20 +3,10 @@
  * Date   : May-2020
  * Editor : Sublime text
  * Local server: Xampp
- * Title : Username and password authentication system 
+ * Title : Username and Password Authentication System 
  -->
 <?php
 session_start(); 
-echo $_SESSION['submit'];
-if(isset($_SESSION['submit']))
-{
-  echo "submit";  
-}
-else
-{
-  echo "not submit";
-}
-
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,28 +20,23 @@ else
   </head>
 <body style="background:white">
 <div class="alert alert-success">
-  <strong>Welcome!!</strong>
-
+	<div class="container">
+  <strong>Welcome!!
 <?php
 if(!isset($_SESSION['username']))
 {
-    echo "<p align='center'>Please Login again ";
-    echo "<a href='home1.html'>Click Here to Login</a></p>";
+	header('Location: home1.html');
 }
 else
 {
   echo ucfirst($_SESSION['username']);  
 }
  
-?>
-   <p>"You are successfully authenticated!!"</p>
-  <div class="container">
-<a href="logout.php" class="btn btn-primary stretched-link">Click here to go back<br></a></div>
-</div>
-
+?></strong>
+<p>"You are successfully authenticated!!"</p><a href="logout.php">Logout<br><br></a></div> 
 <?php
   $rss = new DOMDocument(); //https://bavotasan.com/2010/display-rss-feed-with-php/
-  $rss->load('http://wordpress.org/news/feed/');
+  $rss->load('https://news.google.com/news/rss'); //http://wordpress.org/news/feed/
   $feed = array();
   foreach ($rss->getElementsByTagName('item') as $node) {
     $item = array ( 
@@ -73,6 +58,5 @@ else
     echo '<p>'.$description.'</p>';
   }
 ?>
-
 </body>
 </html>

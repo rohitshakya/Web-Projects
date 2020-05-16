@@ -33,6 +33,7 @@
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <?php
 session_start();
+$_SESSION["msg"] = "Invalid Username or Password!";
 echo $_SESSION["msg"];
 ?>
 

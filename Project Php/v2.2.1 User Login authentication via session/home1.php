@@ -3,17 +3,16 @@
  * Date   : May-2020
  * Editor : Sublime text
  * Local server: Xampp
- * Title : Username and password authentication system 
+ * Title : Username and Password Authentication System 
  -->
  <?php
- 
- if (isset($_POST['submit'])) {
   session_start();
-  $_SESSION["msg"] = "Invalid Username or Password!";
+  if(!isset($_POST['submit']))
+  {
+  	header('Location:home1.html');
+  }
   $_SESSION['start'] = time();
   $_SESSION['expire'] = $_SESSION['start'] + (5 * 60) ; //session exist for 5 minutes 
- }
- 
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,9 +35,6 @@ $password = "";
 $database="mydb";
 $name=$_POST['name'];
 $pass=$_POST['pass'];
-
-
-
 error_reporting ( E_ALL ) ;
 ini_set ( 'display_errors' , 1 ) ;
 
@@ -55,7 +51,7 @@ if(count($_POST)>0) {
    $result = mysqli_query($conn,"SELECT * FROM user WHERE name='" . $_POST["name"] . "' and password = '". $_POST["pass"]."'");
    $count  = mysqli_num_rows($result);
    if($count==0) {
-      header('Location: failure.php');
+     header('Location: failure.php');
    } else {
     $_SESSION["username"]=$_POST['name'];
     $_SESSION['submit']=$_POST['submit'];
