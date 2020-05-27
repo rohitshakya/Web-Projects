@@ -21,8 +21,8 @@
 `flow  
 home1->user1||home1->failure  
 failure->user1  
-user1->home1  
-`  
+user1->home1 
+`  ![image](https://github.com/rohitshakya/Web-Project/blob/master/v3.0%20Weather%20forecasting%20using%20curl%20API/weather.PNG)
   
   
   
