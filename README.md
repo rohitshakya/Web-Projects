@@ -1,4 +1,4 @@
-# Web Projects for learning purpose  
+# PHP based Web Projects for learning purpose  
 ### Install Xampp for project php
 
 * For phpmyadmin, sql and apache.
