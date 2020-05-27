@@ -1,0 +1,6 @@
+
+// $str = file_get_contents('http://bulk.openweathermap.org/sample/city.list.json.gz');// convert json into string
+ $str = file_get_contents('city/city.json');
+ $json = json_decode($str, true); // decode the JSON into an associative array
+// echo '<pre>' . print_r($json, true) . '</pre>'; //printing whole json file in form of json
+ echo $cityName = $json[0]['name'];
