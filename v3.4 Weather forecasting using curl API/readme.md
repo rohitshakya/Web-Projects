@@ -18,11 +18,11 @@
 `$conn = new mysqli($servername, $dbusername, $password);`    
 `?>`  
   
-`flow  
-index->user||index->failure    
-failure->user    
-user->index||user->weathersearch   
-username:rohit and password: shakya, for authentication into web application.`      
+`flow`  
+`index->user||index->failure`      
+`failure->user`      
+`user->index||user->weathersearch`     
+`username:rohit and password: shakya, for authentication into web application.`        
 ![image](https://github.com/rohitshakya/Web-Project/blob/master/v3.0%20Weather%20forecasting%20using%20curl%20API/weather.PNG)  
 
 ![image](https://github.com/rohitshakya/Web-Project/blob/master/v3.0%20Weather%20forecasting%20using%20curl%20API/weather2.PNG)  
