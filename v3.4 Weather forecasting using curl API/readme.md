@@ -1,5 +1,5 @@
 ### v3.4 Weather forecasting using curl API with Search Box Navigation System covering 12000+ cities in the world
-### Install Xampp for project php
+### Install Xampp to run this web application
 
 * For phpmyadmin, sql and apache.
 * For database creation and manipulation
@@ -19,10 +19,10 @@
 `?>`  
   
 `flow  
-index->user||index->failure  
-failure->user  
-user->index||user->weathersearch 
-username:rohit and password: shakya, for authentication into web application.`    
+index->user||index->failure    
+failure->user    
+user->index||user->weathersearch   
+username:rohit and password: shakya, for authentication into web application.`      
 ![image](https://github.com/rohitshakya/Web-Project/blob/master/v3.0%20Weather%20forecasting%20using%20curl%20API/weather.PNG)  
 
 ![image](https://github.com/rohitshakya/Web-Project/blob/master/v3.0%20Weather%20forecasting%20using%20curl%20API/weather2.PNG)  
