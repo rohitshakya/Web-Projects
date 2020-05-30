@@ -1,5 +1,5 @@
 ### v3.5 Weather report using curl API with Search Box Navigation System covering 600+ top cities in the world    
-[Click here to see demo](https://rohitshakyatestapp.herokuapp.com/)
+[Click here to see demo](https://weather-report12.herokuapp.com/)
 ### Install Xampp to run this web application
 
 * For phpmyadmin, sql and apache.
@@ -23,9 +23,9 @@
 `flow`  
 `index->user||index->failure`      
 `failure->user`      
-`user->index||user->weathersearch`       
-
-![image](https://github.com/rohitshakya/Web-Project/blob/master/v3.0%20Weather%20forecasting%20using%20curl%20API/weather.PNG)  
+`user->index||user->weathersearch`         
+#### Data provided in part by OpenWeatherMap.org
+  
 
   
   
