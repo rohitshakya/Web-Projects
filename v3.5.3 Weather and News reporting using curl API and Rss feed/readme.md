@@ -1,4 +1,4 @@
-### v3.5.3 Weather and News reporting using curl API and RSS feed with Search Box Navigation System covering 600+ top cities in the world    
+### v3.5.4 Weather and News reporting using curl API and RSS feed with Search Box Navigation System covering 600+ top cities in the world    
 [Click here to see demo](https://weather-report12.herokuapp.com/)
 ### Install Xampp to run this web application
 
