@@ -25,6 +25,15 @@ user1->home1
 Use key code`    
 ![image](https://github.com/rohitshakya/Web-Project/blob/master/v3.0%20Weather%20forecasting%20using%20curl%20API/weather.PNG)  
   
+### Default login credentials
+
+```
+Username: rohit
+Password: shakya
+```
+  
+  
+
   
   
 

@@ -23,6 +23,16 @@ home1->user||home1->failure
 failure->user  
 user->home1|| user->comment  
 `  
+### Default login credentials
+
+```
+Username: rohit
+Password: shakya
+```
+  
+  
+
+
   
   
   

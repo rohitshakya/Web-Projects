@@ -26,6 +26,15 @@
 `user->index||user->weathersearch`         
 #### Data provided in part by OpenWeatherMap.org
   
+### Default login credentials
+
+```
+Username: rohit
+Password: shakya
+```
+  
+  
+
 
   
   
