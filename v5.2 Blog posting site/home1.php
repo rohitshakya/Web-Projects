@@ -1,9 +1,9 @@
 <!--
  * Author : Rohit Shakya
- * Date   : May-2020
+ * Date   : June-2020
  * Editor : Sublime text
  * Local server: Xampp
- * Title : Username and Password Authentication System 
+ * Title : Blog posting site 
  -->
  <?php
   session_start();

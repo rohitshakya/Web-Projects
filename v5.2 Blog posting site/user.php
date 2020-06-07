@@ -1,9 +1,9 @@
 <!--
  * Author : Rohit Shakya
- * Date   : May-2020
+ * Date   : June-2020
  * Editor : Sublime text
  * Local server: Xampp
- * Title : Username and Password Authentication System 
+ * Title : Blog posting site 
  -->
 <?php
 session_start(); 
@@ -52,13 +52,29 @@ else
       <!--<form action="comment.php" method="post" onsubmit="alert('Commment posted successfully!')"> for alert on submission-->
       <form action="comment.php" method="post">
         <label>Title</label>
-      <input id="example" type="text" name="title" >
-      <label>Description</label>
-      <input id="example" type="text" name="desc">
+      <input id="example" type="text" name="title" style="border: 1px solid #F2F2F2;">
+      <textarea placeholder="Write your comment here!" class="pb-cmnt-textarea" name="desc"></textarea>
       <input id=sent type="submit" name="submit">
       </form> 
     </div>
 </div>
+
+
+<style>
+    .pb-cmnt-container {
+        font-family: Lato;
+        margin-top: 100px;
+    }
+
+    .pb-cmnt-textarea {
+        resize: none;
+        padding: 20px;
+        height: 130px;
+        width: 100%;
+        border: 1px solid #F2F2F2;
+    }
+</style>
+
 <div class="container-fluid" id="Commments">
 <?php
 $servername = "localhost";
