@@ -17,6 +17,13 @@
 `$conn = new mysqli($servername, $dbusername, $password);`    
 `?>`    
 * `header('Location: xyz.html'); is used`  
+
+### Default login credentials
+
+```
+Username: rohit
+Password: shakya
+```
   
   
 
