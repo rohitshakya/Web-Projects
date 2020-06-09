@@ -16,7 +16,7 @@ if ($conn->connect_error) {
     echo "connection error";
 } 
   
-  $sql = "SELECT * FROM story WHERE id=$_SESSION[id]";
+  $sql = "SELECT * FROM story WHERE id=$_SESSION[id] ORDER BY title"; //for descending order use "ORDER BY title DESC"
   $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
