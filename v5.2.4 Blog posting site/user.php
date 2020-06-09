@@ -45,6 +45,7 @@ else
 </h2>
 <p>"You are successfully authenticated!!"</p><?php echo $_SESSION['msg']."<br>";?></strong>
 <a href="logout.php">Logout</a><br><br></a>
+<a href='user.php?clearAll=true'>Delete All</a>
 </div></h2></div>
 <!--alert box over-->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
@@ -65,8 +66,13 @@ else
 <div class="container-fluid" id="Commments">
 <?php
 showComment(); // call the function
+
+if (isset($_GET['clearAll'])) {
+    deleteFunction();
+  }
 ?>
 </div>
+
 
 </body>
 </html>

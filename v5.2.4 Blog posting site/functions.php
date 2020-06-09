@@ -1,4 +1,6 @@
 <?php
+
+
 function showComment() {
 
 $servername = "localhost";
@@ -20,7 +22,7 @@ if ($conn->connect_error) {
 if ($result->num_rows > 0) {
 
   // output data of each row
-  echo "Title &nbsp&nbsp&nbsp&nbsp"."Description<br>";
+  echo "Title &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"."Description<br>";
   while($row = $result->fetch_assoc()) {
     echo  $row["title"]. " &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . $row["description"]. "<br>";
   }
@@ -58,7 +60,39 @@ if ($conn->query($sql) === TRUE) {
 }
   
 $conn->close();  
+header("Refresh:0; url=user.php");
 }
 
+function deleteFunction() {
+    echo 'Delete function called';
+$servername = "localhost";
+$dbusername = "root";
+$password = "";
+$database="mydb";
+$id=$_SESSION['id'];
+error_reporting ( E_ALL ) ;
+ini_set ( 'display_errors' , 1 ) ;
+// Create connection
+$conn = new mysqli($servername, $dbusername, $password,$database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+$sql = "DELETE FROM `story` WHERE id=$id";
+if ($conn->query($sql) === TRUE) {
+  $_SESSION['msg']="Successfully Deleted";
+ // header('Location:user.php');
+
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+  
+$conn->close(); 
+header("Refresh:0; url=user.php"); 
+
+
+
+  }
 
 ?>
