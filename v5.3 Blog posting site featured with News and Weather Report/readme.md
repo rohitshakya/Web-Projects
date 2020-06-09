@@ -1,4 +1,4 @@
-### v5.2.4 Blog posting site
+### v5.3 Blog posting site featured with News and Weather Report
 ### Install Xampp for project php
 
 * For phpmyadmin, sql and apache.
