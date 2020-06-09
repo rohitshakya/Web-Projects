@@ -29,6 +29,14 @@ user->home1|| user->comment
 Username: rohit
 Password: shakya
 ```
+ 
+## Copyright and License
+
+Copyright 2020-2021 Rohit Shakya.
+#### Data provided in part by OpenWeatherMap.org 
+  
+
+  
   
   
 
