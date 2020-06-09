@@ -1,4 +1,4 @@
-### v5.2.2 Blog posting site
+### v5.2.3 Blog posting site
 ### Install Xampp for project php
 
 * For phpmyadmin, sql and apache.

@@ -12,7 +12,8 @@
   	header('Location:home1.html');
   }
   $_SESSION['start'] = time();
-  $_SESSION['expire'] = $_SESSION['start'] + (5 * 60) ; //session exist for 5 minutes 
+  $_SESSION['expire'] = $_SESSION['start'] + (5 * 60) ;
+  $_SESSION['msg']=""; //session exist for 5 minutes 
  ?>
 <!DOCTYPE html>
 <html lang="en">
