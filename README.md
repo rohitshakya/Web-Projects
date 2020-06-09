@@ -3,7 +3,6 @@
 
 ### v5.3 Blog posting site featured with News and Weather Report
 ### Install Xampp for project php
-
 * For phpmyadmin, sql and apache.
 * For database creation and manipulation
 * For hosting website locally on your personal system
@@ -32,6 +31,14 @@ user->home1|| user->comment
 Username: rohit
 Password: shakya
 ```
+ 
+## Copyright and License
+
+Copyright 2020-2021 Rohit Shakya.
+#### Data provided in part by OpenWeatherMap.org 
+  
+
+  
   
   
 
@@ -39,5 +46,4 @@ Password: shakya
   
   
   
-
 
