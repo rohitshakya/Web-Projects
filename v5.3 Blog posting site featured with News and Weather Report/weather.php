@@ -19,9 +19,14 @@ if(!isset($_SESSION['username']))
 <html lang="en">
   <head>
 	<title>HomePage</title>
-	<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="css/search.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" >
+  <meta name="author" content="Rohit Shakya">
+  <meta name="keywords" content="Commment, Map, User, Authentication, Weather, Report, News ">
+  <meta name="title" content="Commment Posting Site">
+  <meta name="description" content="Welcome to our comment posting site. Enjoy!!">
+  <link rel="stylesheet" href="css/mycss.css">
+  <link rel="stylesheet" type="text/css" href="css/search.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -68,6 +73,28 @@ $googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId .
 //search bar file added here to reduce code
 
 include'searchbox.php';?>
+<br><strong>
+<button onclick="getLocation()">Get your coordinates</button><br>
+
+<p id="demo"></p></strong>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
 
 <!--section over-->
 </body>
