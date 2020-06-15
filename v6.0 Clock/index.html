@@ -3,7 +3,7 @@
 <head>
 	<title>Clock</title>
 </head>
-<body onload="startTime()">
+<body onload="startTime()" style="background:#FFFACD">
 <h1><p>Clock</p>
 <div id="displayClock"></div></h1>
 
@@ -32,5 +32,13 @@ function checkTimeHour(i) {
 }
 
 </script>
+    <audio id="audio" src="p.webm" autoplay="false" ></audio>
+    <button onclick="playSound();"> Play</button>
+    <script>
+    function playSound() {
+          var sound = document.getElementById("audio");
+          sound.play();
+      }
+    </script>
 </body>
 </html>
