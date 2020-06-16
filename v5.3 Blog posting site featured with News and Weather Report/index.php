@@ -7,5 +7,5 @@
  * Version: v5.3
  -->
  <?php 
-  	header('Location:create_database.php');
+  	header('Location:home1.html');
  ?>
