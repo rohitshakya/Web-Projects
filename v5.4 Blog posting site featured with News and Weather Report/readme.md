@@ -1,4 +1,4 @@
-### v5.3.2 Blog posting site featured with News, Weather and Coordinates Report
+### v5.4 Blog posting site featured with News, Weather and Coordinates Report
 ### Install Xampp for project php
 
 * For phpmyadmin, sql and apache.
