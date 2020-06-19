@@ -64,7 +64,6 @@ if (isset($_GET['clearAll'])) {
   }
 ?>
 </div>
-
-
+<?php getImage();?>
 </body>
 </html>

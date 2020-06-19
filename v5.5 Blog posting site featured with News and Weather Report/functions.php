@@ -101,8 +101,38 @@ if ($conn->query($sql) === TRUE) {
 $conn->close(); 
 header("Refresh:0; url=user.php"); 
 
-
-
   }
+function getImage()
+{
+  
+//$id = $_GET['id'];
+  // do some validation here to ensure id is safe
+$servername = "localhost";
+$dbusername = "root";
+$password = "";
+$database="mydb";
+error_reporting ( E_ALL ) ;
+ini_set ( 'display_errors' , 1 ) ;
+// Create connection
+$conn = new mysqli($servername, $dbusername, $password,$database);
 
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+  $query = "SELECT profile FROM user";  
+                $result = mysqli_query($conn, $query);  
+                while($row = mysqli_fetch_array($result))  
+                {  
+                     echo '  
+                          <tr>  
+                               <td>  
+                                    <img src="data:image/jpeg;base64,'.base64_encode($row['profile'] ).'" height="200" width="200" class="img-thumnail" />  
+                               </td>  
+                          </tr>  
+                     ';  
+                }  
+
+  
+}
 ?>
