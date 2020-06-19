@@ -1,7 +1,7 @@
 # PHP based Web Projects  
 
 
-### v5.3 Blog posting site featured with News and Weather Report
+### v5.5 Blog posting site featured with News and Weather Report
 ### Install Xampp for project php
 * For phpmyadmin, sql and apache.
 * For database creation and manipulation
