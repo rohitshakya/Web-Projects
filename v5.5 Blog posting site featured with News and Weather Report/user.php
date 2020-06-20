@@ -12,8 +12,13 @@ include 'functions.php';
 if (isset($_POST['submit'])) {
   insert();
 }
+
 include 'nav.php';
+if (isset($_GET['clearAll'])) {
+deleteFunction();
+}
 ?>
+
 
   <!-- Page Content -->
   <div class="col-lg-3">
@@ -38,33 +43,21 @@ else
           <div class="card-body">
             <h3 class="card-title">Comments and Posts</h3>
             <?php
-            showComment(); // call the function
-            if (isset($_GET['clearAll'])) {
-            deleteFunction();
-            }
-            ?>
-          </div>
+            showComment();?>
+            </div>
         </div>
         </div>
 
 <hr>
     <div class="info">
-      <label for="example">Add Comment
-      </label>
       <form action="user.php" method="post">
-      <input id="example" type="text" name="title" style="border: 1px solid #F2F2F2;"><br>
-      <textarea placeholder="Write your comment here!" class="pb-cmnt-textarea" name="desc"></textarea>
+      <input id="example" type="text" name="title" placeholder="Describe your title here..." style="border: 1px solid #A9A9A9;"><br>
+      <textarea placeholder="Write your comment here!" class="pb-cmnt-textarea" name="desc" style=" margin-top: 1px; border: 1px solid #A9A9A9;"></textarea>
       <input id=sent type="submit" name="submit">
       </form> 
     </div>
-<hr>
+    <hr>
 
-
-<footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Rohit Shakya 2020</p>
-    </div>
-  </footer>
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>

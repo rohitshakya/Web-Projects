@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
 
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo  $row["title"]. "<br>". $row["description"]. "<br>Posted by Anonymous on 3/1/17</small>"."<hr>";
+    echo  "<h3><strong>".$row["title"]."</strong></h3>". $row["description"]. "<br>Posted by ".$_SESSION['username']." on ". date("d/m/Y")."</small>"."<hr>";
   }
 } else {
   echo "0 results";
