@@ -111,6 +111,8 @@ $servername = "localhost";
 $dbusername = "root";
 $password = "";
 $database="mydb";
+$id=$_SESSION['id'];
+
 error_reporting ( E_ALL ) ;
 ini_set ( 'display_errors' , 1 ) ;
 // Create connection
@@ -120,14 +122,15 @@ $conn = new mysqli($servername, $dbusername, $password,$database);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-  $query = "SELECT profile FROM user";  
+  $query = "SELECT profile FROM user WHERE user_id=$id";  
                 $result = mysqli_query($conn, $query);  
                 while($row = mysqli_fetch_array($result))  
                 {  
                      echo '  
                           <tr>  
                                <td>  
-                                    <img src="data:image/jpeg;base64,'.base64_encode($row['profile'] ).'" height="200" width="200" class="img-thumnail" />  
+                                    <img src="data:image/jpeg;base64,'.base64_encode($row['profile'] ).'" height="200" width="200" class="img-thumnail" alt="Avatar" style="border-radius: 50%; /> 
+                                     
                                </td>  
                           </tr>  
                      ';  
