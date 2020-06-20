@@ -14,13 +14,16 @@ if (isset($_POST['submit'])) {
 }
 include 'nav.php';
 ?>
-  <?php getImage();?>
-	<div class="container">
+
+  <!-- Page Content -->
+  <div class="col-lg-3">
+        <?php getImage();?>
+  <div class="container">
   <h2><strong>Welcome!!
 <?php
 if(!isset($_SESSION['username']))
 {
-	header('Location: home1.html');
+  header('Location: home1.html');
 }
 else
 {
@@ -28,32 +31,43 @@ else
 } 
 ?></strong></h2>
 <p>"You are successfully authenticated!!"</p><?php echo $_SESSION['msg']."<br>";?></strong>
-<a href='user.php?clearAll=true'>Delete All</a></div>
+<a href='user.php?clearAll=true'>Delete All</a></div></div>
 
-<!--alert box over-->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
+      <div class="col-lg-9">
+        <div class="card mt-4">
+          <div class="card-body">
+            <h3 class="card-title">Comments and Posts</h3>
+            <?php
+            showComment(); // call the function
+            if (isset($_GET['clearAll'])) {
+            deleteFunction();
+            }
+            ?>
+          </div>
+        </div>
+        </div>
+
 <hr>
     <div class="info">
-      <label for="example">Add Commment
+      <label for="example">Add Comment
       </label>
-      <!--<form action="comment.php" method="post" onsubmit="alert('Commment posted successfully!')"> for alert on submission-->
       <form action="user.php" method="post">
-        <label>Title</label>
-      <input id="example" type="text" name="title" style="border: 1px solid #F2F2F2;">
+      <input id="example" type="text" name="title" style="border: 1px solid #F2F2F2;"><br>
       <textarea placeholder="Write your comment here!" class="pb-cmnt-textarea" name="desc"></textarea>
       <input id=sent type="submit" name="submit">
       </form> 
     </div>
-</div>
-<div class="container-fluid" id="Commments">
-<?php
-showComment(); // call the function
+<hr>
 
-if (isset($_GET['clearAll'])) {
-    deleteFunction();
-  }
-?>
-</div>
+
+<footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Rohit Shakya 2020</p>
+    </div>
+  </footer>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -32,9 +32,8 @@ if ($conn->connect_error) {
 if ($result->num_rows > 0) {
 
   // output data of each row
-  echo "Title &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"."Description<br>";
   while($row = $result->fetch_assoc()) {
-    echo  $row["title"]. " &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . $row["description"]. "<br>";
+    echo  $row["title"]. "<br>". $row["description"]. "<br>Posted by Anonymous on 3/1/17</small>"."<hr>";
   }
 } else {
   echo "0 results";
@@ -74,7 +73,6 @@ header("Refresh:0; url=user.php");
 }
 
 function deleteFunction() {
-    echo 'Delete function called';
 $servername = "localhost";
 $dbusername = "root";
 $password = "";
