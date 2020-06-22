@@ -1,17 +1,18 @@
-# PHP based Web Projects  
+### v5.5 Blog Posting Site featured with Weather, News and Geo location Coordinate System with search box navigation using curl API and RSS feed.  
 
-
-### v5.5 Blog posting site featured with News and Weather Report
+[Click here to view](http://blogpostsite.epizy.com/)
 ### Install Xampp for project php
+
 * For phpmyadmin, sql and apache.
 * For database creation and manipulation
 * For hosting website locally on your personal system
 * Learn Sql queries for database manipulations
 
-#### Default settings will be  
+#### Default settings and Installation will be  
 * Every file will be put into htdocs folder i.e.( C:\xampp\htdocs )
 * Turn on apache and mysql from xammp control panel  
-* There will be 2 files one for html and one for php named as home1.html and home1.php respectively    
+* Create a database named as mydb  
+* Create 2 tables user(3 columns:id, name and password) and story(3 columns:id, title and description).  
 `<?php`   
 `$servername = "localhost";`    
 `$dbusername = "root";`    
@@ -19,17 +20,22 @@
 `// Create connection`    
 `$conn = new mysqli($servername, $dbusername, $password);`    
 `?>`  
-  
-`flow  
-home1->user||home1->failure  
-failure->user  
-user->home1|| user->comment  
-`  
+    
 ### Default login credentials
 
 ```
 Username: rohit
 Password: shakya
+```
+
+```
+Username: mayank
+Password: kaushik
+```
+
+```
+Username: nitesh
+Password: yadav
 ```
  
 ## Copyright and License
