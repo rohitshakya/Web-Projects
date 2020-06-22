@@ -4,7 +4,7 @@
  * Editor : Sublime text
  * Local server: Xampp
  * Title : Blog posting site featuring with Weather and News report  
- * Version: v5.3
+ * Version: v5.6
  -->
  <?php
   session_start();
@@ -15,34 +15,14 @@
   $_SESSION['start'] = time();
   $_SESSION['expire'] = $_SESSION['start'] + (5 * 60) ;
   $_SESSION['msg']=""; //session exist for 5 minutes 
- ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <title>HomePage</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" >
-  <meta name="author" content="Rohit Shakya">
-  <meta name="keywords" content="Commment, Map, User, Authentication, Weather, Report, News ">
-  <meta name="title" content="Commment Posting Site">
-  <meta name="description" content="Welcome to our comment posting site. Enjoy!!">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  </head>
-<body style="background: orange;">
-
-</body>
-</html>
-<?php
-$servername = "localhost";
-$dbusername = "root";
-$password = "";
-$database="mydb";
-$name=$_POST['name'];
-$pass=$_POST['pass'];
-error_reporting ( E_ALL ) ;
-ini_set ( 'display_errors' , 1 ) ;
+  $servername = "localhost";
+  $dbusername = "root";
+  $password = "";
+  $database="mydb";
+  $name=$_POST['name'];
+  $pass=$_POST['pass'];
+  error_reporting ( E_ALL ) ;
+  ini_set ( 'display_errors' , 1 ) ;
 
 // Create connection
 $conn = new mysqli($servername, $dbusername, $password,$database);
@@ -57,7 +37,8 @@ if(count($_POST)>0) {
    $result = mysqli_query($conn,"SELECT * FROM user WHERE name='" . $_POST["name"] . "' and password = '". $_POST["pass"]."'");
    $count  = mysqli_num_rows($result);
    if($count==0) {
-     header('Location: failure.php');
+    $_SESSION["msg"] = "Invalid Username or Password!";
+     header('Location: status.php');
    } else {
     // Associative array
 $row = $result -> fetch_array(MYSQLI_ASSOC);
@@ -70,7 +51,5 @@ $_SESSION['id']= $row["user_id"];
    }
 }
 echo $message;   
-         
-
 ?>
 		

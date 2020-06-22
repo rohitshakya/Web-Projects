@@ -72,6 +72,32 @@ $conn->close();
 header("Refresh:0; url=user.php");
 }
 
+function uploadImage() {
+$servername = "localhost";
+$dbusername = "root";
+$password = "";
+$database="mydb";
+$id=$_SESSION['id'];
+error_reporting ( E_ALL ) ;
+ini_set ( 'display_errors' , 1 ) ;
+// Create connection
+$conn = new mysqli($servername, $dbusername, $password,$database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+$sql = "UPDATE `user` SET `profile` =   WHERE user_id=$id";
+if ($conn->query($sql) === TRUE) {
+  
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+  
+$conn->close();  
+header("Refresh:0; url=user.php");
+}
+
 function deleteFunction() {
 $servername = "localhost";
 $dbusername = "root";

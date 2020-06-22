@@ -13,7 +13,7 @@ if(!isset($_SESSION['username']))
 {
   header('Location: home1.html');
 }
-include 'nav.php';
+include_once 'nav.php';
 ?>
 
 <!--main body-->

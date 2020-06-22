@@ -1,4 +1,5 @@
-### v5.5 Blog posting site featured with News, Weather and Coordinates Report
+### v5.6 Blog Posting Site featured with Weather, News and Geo location Coordinate System with search box navigation using curl API and RSS feed.  
+[Click here to view](http://blogpostsite.epizy.com/)
 ### Install Xampp for project php
 
 * For phpmyadmin, sql and apache.
@@ -24,6 +25,16 @@
 ```
 Username: rohit
 Password: shakya
+```
+
+```
+Username: mayank
+Password: kaushik
+```
+
+```
+Username: nitesh
+Password: yadav
 ```
  
 ## Copyright and License

@@ -8,21 +8,24 @@
  -->
  <?php
 session_start(); 
-include 'functions.php';
+include_once 'nav.php';
+include_once 'functions.php';
 if (isset($_POST['submit'])) {
   insert();
 }
 
-include 'nav.php';
 if (isset($_GET['clearAll'])) {
 deleteFunction();
+}
+if (isset($_GET['uploadImage'])) {
+uploadImage();
 }
 ?>
 
 
   <!-- Page Content -->
   <div class="col-lg-3">
-        <?php getImage();?>
+        <?php getImage();?> 
   <div class="container">
   <h2><strong>Welcome!!
 <?php
@@ -36,7 +39,22 @@ else
 } 
 ?></strong></h2>
 <p>"You are successfully authenticated!!"</p><?php echo $_SESSION['msg']."<br>";?></strong>
-<a href='user.php?clearAll=true'>Delete All</a></div></div>
+<a href='user.php?clearAll=true'>Delete All</a>
+
+<hr>
+    <div class="autocomplete">
+      <form action="user.php" method="post">
+      <input id="example" type="text"  name="title" placeholder="Describe your title here!" style="border: 1px solid #A9A9A9;"><br>
+      <textarea placeholder="Write your comment here!" class="pb-cmnt-textarea" name="desc" style=" margin-top: 1px; border: 1px solid #A9A9A9;"></textarea>
+      <input id=sent type="submit" name="submit">
+      </form> 
+    </div>
+<hr>
+
+</div>
+</div>
+
+
 
       <div class="col-lg-9">
         <div class="card mt-4">
@@ -47,16 +65,6 @@ else
             </div>
         </div>
         </div>
-
-<hr>
-    <div class="info">
-      <form action="user.php" method="post">
-      <input id="example" type="text" name="title" placeholder="Describe your title here..." style="border: 1px solid #A9A9A9;"><br>
-      <textarea placeholder="Write your comment here!" class="pb-cmnt-textarea" name="desc" style=" margin-top: 1px; border: 1px solid #A9A9A9;"></textarea>
-      <input id=sent type="submit" name="submit">
-      </form> 
-    </div>
-    <hr>
 
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

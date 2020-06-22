@@ -13,30 +13,38 @@ if(!isset($_SESSION['username']))
 {
   header('Location: home1.html');
 }
-include 'nav.php';
+include_once 'nav.php';
 ?>
-
-
-<!--Search Bar Form-->
-<!--Make sure the form has the autocomplete function switched off:-->
 <form autocomplete="off" action="/weathersearch.php">
   <div class="autocomplete" style="width:300px;">
     <input id="myInput" type="text" name="myCountry" placeholder="Enter a City Name">
   </div>
   <input type="submit">
 </form>
-<!--form over-->
-
-<!--nav bar complete-->
 <strong>
-<?php
-$apiKey = "231a533e913c7e004f7ea56e36a67d83";
-$cityId = 1261481;
-$googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=metric&APPID=" . $apiKey;
-//search bar file added here to reduce code
+<h1><?php
+$country=$_GET['myCountry'];
+echo "$country";
+?></h1>
+<p id="placename"></p>
 
-include'searchbox.php';?>
-<br><strong>
+<?php 
+//$str = file_get_contents('http://bulk.openweathermap.org/sample/city.list.json.gz'); //via link
+ $str = file_get_contents('localcity.json');
+ $json = json_decode($str, true); // decode the JSON into an associative array
+// echo '<pre>' . print_r($json, true) . '</pre>'; //printing whole json file in form of json
+ //echo $cityName = $json['Pakistan'];
+ //echo $cityName = $json[$country];
+$apiKey = "231a533e913c7e004f7ea56e36a67d83";
+$cityId = $json[$country];
+if(!isset($cityId))
+{
+  header('Location: index.php');
+}
+$googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=metric&APPID=" . $apiKey;
+ include_once'searchbox.php';?>
+
+ <br><strong>
 <button onclick="getLocation()">Get your coordinates</button><br>
 
 <p id="demo"></p></strong>
@@ -59,6 +67,6 @@ function showPosition(position) {
 </script>
 
 
-<!--section over-->
+
 </body>
 </html>

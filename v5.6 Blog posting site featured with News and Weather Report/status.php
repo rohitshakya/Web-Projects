@@ -35,12 +35,13 @@
   		<button type="submit" class="btn btn-default">Submit</button>
 	</form>  
 </div>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<div class="container"><br><a href="signup.html">Sign Up and create your account!!</a></div>
+<div class="container">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>
 <?php
 session_start();
-$_SESSION["msg"] = "Invalid Username or Password!";
 echo $_SESSION["msg"];
 ?>
-
+</div>
 </body>
 </html>
