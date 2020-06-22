@@ -17,9 +17,6 @@ if (isset($_POST['submit'])) {
 if (isset($_GET['clearAll'])) {
 deleteFunction();
 }
-if (isset($_GET['uploadImage'])) {
-uploadImage();
-}
 ?>
 
 

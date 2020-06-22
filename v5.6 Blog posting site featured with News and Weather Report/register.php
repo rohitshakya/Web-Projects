@@ -9,7 +9,7 @@
 
 
 <?php
-if (isset($_POST['submit'])){
+session_start();
 $servername = "localhost";
 $dbusername = "root";
 $password = "";
@@ -25,25 +25,16 @@ $conn = new mysqli($servername, $dbusername, $password,$database);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
+    $_SESSION['msg']="connection error!!";
 } 
 if($pass===$cpass)
 {
-
-
 $sql = "INSERT INTO `user` (`user_id`, `name`, `password`, `profile`) VALUES (NULL, '$name', '$pass', NULL);";
 if ($conn->query($sql) === TRUE) {
-  session_start();
-  $_SESSION['msg']="Successfully created!";
-  header('Location: status.php');
-  
-
-}
-}
- else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-  $_SESSION['msg']="error!!";
-}
-
+  $_SESSION['msg']="Successfully created!!";
+}}
+else {$_SESSION['msg']="Both passwords must be same!";}
 $conn->close();  
-}
+header('Location: status.php');
+
 ?>
