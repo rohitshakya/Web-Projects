@@ -32,9 +32,12 @@ if($pass===$cpass)
 $sql = "INSERT INTO `user` (`user_id`, `name`, `password`, `profile`) VALUES (NULL, '$name', '$pass', NULL);";
 if ($conn->query($sql) === TRUE) {
   $_SESSION['msg']="Successfully created!!";
+
+
 }}
 else {$_SESSION['msg']="Both passwords must be same!";}
-$conn->close();  
-header('Location: status.php');
+$conn->close(); 
+header("Refresh:0; url=status.php");
+
 
 ?>

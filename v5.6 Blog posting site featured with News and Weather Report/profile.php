@@ -15,7 +15,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $image = $_FILES['image']['tmp_name'];
     $img = file_get_contents($image);
     $con = mysqli_connect('localhost','root','','mydb') or die('Unable To connect');
-    //$sql= "INSERT INTO `user` (profile) VALUES (?) ";
     $sql= "UPDATE user set profile=? WHERE user_id=$_SESSION[id] ";
     $stmt = mysqli_prepare($con,$sql);
 
@@ -25,6 +24,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $check = mysqli_stmt_affected_rows($stmt);
     if($check==1){
         $msg = 'Image Successfullly Uploaded';
+        header('Location:user.php');
     }else{
         $msg = 'Error uploading image';
     }

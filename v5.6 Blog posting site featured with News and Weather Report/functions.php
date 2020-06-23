@@ -33,10 +33,8 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     echo  "<h3><strong>".$row["title"]."</strong></h3>". $row["description"]. "<br>Posted by ".$_SESSION['username']." on ". date("d/m/Y")."</small> ";
-      $pid=$row["post_id"];
-      echo $pid;?>
+      $pid=$row["post_id"];?>
     <a href='user.php?clearPost=true&num=<?php echo $pid?>'>Delete</a><?php echo "<hr>";
-    
   }
 } else {
   echo "0 results";
@@ -100,7 +98,7 @@ ini_set ( 'display_errors' , 1 ) ;
                      echo '  
                           <tr>  
                                <td>  
-                                    <img src="data:image/jpeg;base64,'.base64_encode($row['profile'] ).'" height="200" width="200" class="img-thumnail" alt="Avatar" style="border-radius: 50%; /> 
+                                    <img src="data:image/jpeg;base64,'.base64_encode($row['profile'] ).'" height="200" width="200" class="img-thumnail" alt="avatar" style="border-radius: 50%; /> 
                                      
                                </td>  
                           </tr>  
