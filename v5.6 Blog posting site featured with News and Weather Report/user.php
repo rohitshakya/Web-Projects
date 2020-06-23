@@ -4,7 +4,7 @@
  * Editor : Sublime text
  * Local server: Xampp
  * Title : Blog posting site featuring with Weather and News report  
- * Version: v5.4
+ * Version: v5.6
  -->
  <?php
 session_start(); 
@@ -16,6 +16,12 @@ if (isset($_POST['submit'])) {
 
 if (isset($_GET['clearAll'])) {
 deleteFunction();
+}
+if (isset($_GET['clearPost'])) {
+deletePostFunction($_GET['num']);
+}
+if (isset($_GET['num'])) {
+print6();
 }
 ?>
 

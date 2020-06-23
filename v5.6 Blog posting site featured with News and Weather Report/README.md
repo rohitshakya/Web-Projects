@@ -1,4 +1,4 @@
-### v5.5 Blog posting site featured with News, Weather and Coordinates Report
+### v5.6 Blog posting site featured with News, Weather and Coordinates Report
 ### Install Xampp for project php
 
 * For phpmyadmin, sql and apache.
@@ -29,15 +29,4 @@ Password: shakya
 ## Copyright and License
 
 Copyright 2020-2021 Rohit Shakya.
-#### Data provided in part by OpenWeatherMap.org 
-  
-
-  
-  
-  
-
-
-  
-  
-  
-
+#### Data provided in part by OpenWeatherMap.org  
