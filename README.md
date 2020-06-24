@@ -27,17 +27,6 @@
 Username: rohit
 Password: shakya
 ```
-
-```
-Username: mayank
-Password: kaushik
-```
-
-```
-Username: nitesh
-Password: yadav
-```
- 
 ## Copyright and License
 
 Copyright 2020-2021 Rohit Shakya.
