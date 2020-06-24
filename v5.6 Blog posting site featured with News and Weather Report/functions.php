@@ -32,7 +32,7 @@ if ($result->num_rows > 0) {
 
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo  "<h3><strong>".$row["title"]."</strong></h3>". $row["description"]. "<br>Posted by ".$_SESSION['username']." on ". date("d/m/Y")."</small> ";
+    echo  "<h3><strong>".$row["title"]."</strong></h3>". $row["description"]. "<br>Posted by ".ucfirst($_SESSION['username'])." on ". date("d/m/Y")."</small> ";
       $pid=$row["post_id"];?>
     <a href='user.php?clearPost=true&num=<?php echo $pid?>'>Delete</a><?php echo "<hr>";
   }
@@ -43,7 +43,19 @@ if ($result->num_rows > 0) {
 }
 
 function insert() {
-include_once 'conn.php';
+$servername = "localhost";
+$dbusername = "root";
+$password = "";
+$database="mydb";
+// Create connection
+$conn = new mysqli($servername, $dbusername, $password,$database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    echo "connection error";
+} 
+
 $title=$_POST['title'];
 $desc=$_POST['desc'];
 $id=$_SESSION['id'];
@@ -61,11 +73,23 @@ if ($conn->query($sql) === TRUE) {
 }
   
 $conn->close();  
-header("Refresh:0; url=user.php");
+header("Location: user.php");
 }
 
 function deleteFunction() {
-include_once 'conn.php';
+$servername = "localhost";
+$dbusername = "root";
+$password = "";
+$database="mydb";
+// Create connection
+$conn = new mysqli($servername, $dbusername, $password,$database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    echo "connection error";
+} 
+
 $id=$_SESSION['id'];
 error_reporting ( E_ALL ) ;
 ini_set ( 'display_errors' , 1 ) ;
@@ -80,12 +104,24 @@ if ($conn->query($sql) === TRUE) {
 }
   
 $conn->close(); 
-header("Refresh:0; url=user.php"); 
+header("Location: user.php"); 
 
   }
 function getImage()
 {
-  include_once 'conn.php';
+$servername = "localhost";
+$dbusername = "root";
+$password = "";
+$database="mydb";
+// Create connection
+$conn = new mysqli($servername, $dbusername, $password,$database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    echo "connection error";
+} 
+
 $id=$_SESSION['id'];
 
 error_reporting ( E_ALL ) ;
@@ -109,10 +145,20 @@ ini_set ( 'display_errors' , 1 ) ;
 }
 
 function deletePostFunction($num) {
-include_once 'conn.php';
+$servername = "localhost";
+$dbusername = "root";
+$password = "";
+$database="mydb";
+// Create connection
+$conn = new mysqli($servername, $dbusername, $password,$database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    echo "connection error";
+} 
+
 $id=$_SESSION['id'];
-//$postid=intval($_GET["num"]);
-echo $postid;
 error_reporting ( E_ALL ) ;
 ini_set ( 'display_errors' , 1 ) ;
 
@@ -126,7 +172,7 @@ if ($conn->query($sql) === TRUE) {
 }
   
 $conn->close(); 
-header("Refresh:0; url=user.php"); 
+header("Location:user.php"); 
 
   }
 ?>

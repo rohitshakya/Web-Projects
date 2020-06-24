@@ -33,7 +33,6 @@ $sql = "INSERT INTO `user` (`user_id`, `name`, `password`, `profile`) VALUES (NU
 if ($conn->query($sql) === TRUE) {
   $_SESSION['msg']="Successfully created!!";
 
-
 }}
 else {$_SESSION['msg']="Both passwords must be same!";}
 $conn->close(); 

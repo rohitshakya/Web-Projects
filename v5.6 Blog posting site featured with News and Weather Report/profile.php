@@ -13,6 +13,21 @@ $msg = '';
 echo $msg;
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $image = $_FILES['image']['tmp_name'];
+    $file_size=$_FILES['image']['size'];
+
+  
+    if (($file_size > 1097152)){      
+        $message = 'File too large. File must be less than 1 megabytes.'; 
+        echo '<script type="text/javascript">alert("'.$message.'");</script>'; 
+    }
+    else if (($file_size <=0)){      
+        $message = 'Please select an image'; 
+        echo '<script type="text/javascript">alert("'.$message.'");</script>'; 
+    }
+    
+    else
+    {
+
     $img = file_get_contents($image);
     $con = mysqli_connect('localhost','root','','mydb') or die('Unable To connect');
     $sql= "UPDATE user set profile=? WHERE user_id=$_SESSION[id] ";
@@ -30,6 +45,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
     mysqli_close($con);
 }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,13 +56,20 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   <meta name="author" content="Rohit Shakya">
   </head>
 <body style="background: white;">
+  <div class="container" style="
+  margin: auto;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
+">
 <form action="" method="post" enctype="multipart/form-data">
     <input type="file" name="image" />
     <button>Upload</button>
+    <label>Size must be less than 1mb</label>
 </form>
 <?php
     echo $msg;
 ?>
-<br><a href="user.php">Back</a>
+<br><a href="user.php">Back</a></div>
 </body>
 </html>

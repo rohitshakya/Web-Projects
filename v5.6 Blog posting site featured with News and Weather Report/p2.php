@@ -14,7 +14,6 @@
     $stmt = mysqli_prepare($con,$sql);
     mysqli_stmt_execute($stmt);
     mysqli_close($con);
-    
-    
+    header("location:user.php");
 
 ?>

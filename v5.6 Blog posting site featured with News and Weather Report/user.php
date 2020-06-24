@@ -43,7 +43,9 @@ else
 ?></strong></h2>
 <p>"You are successfully authenticated!!"</p><?php echo $_SESSION['msg']."<br>";?></strong>
 <a href='profile.php'>Update Profile</a><br>
+<a href='p2.php'>Use Default pic</a><br>
 <a href='user.php?clearAll=true'>Delete All</a>
+
 
 
 <hr>
