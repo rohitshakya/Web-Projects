@@ -1,7 +1,7 @@
-### v5.5 Blog Posting Site featured with Weather, News and Geo location Coordinate System with search box navigation using curl API and RSS feed.  
+### v5.6 Blog posting site featured with News, Weather and Coordinates Report
+### Install Xampp for project php  
 
-[Click here to view](http://blogpostsite.epizy.com/)
-### Install Xampp for project php
+[Click here to view](http://blogpostsite.epizy.com/)  
 
 * For phpmyadmin, sql and apache.
 * For database creation and manipulation
@@ -27,18 +27,8 @@
 Username: rohit
 Password: shakya
 ```
+ 
 ## Copyright and License
 
 Copyright 2020-2021 Rohit Shakya.
-#### Data provided in part by OpenWeatherMap.org 
-  
-
-  
-  
-  
-
-
-  
-  
-  
-
+#### Data provided in part by OpenWeatherMap.org  
