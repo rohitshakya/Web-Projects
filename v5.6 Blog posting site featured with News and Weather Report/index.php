@@ -7,5 +7,5 @@
  * Version: v5.6
  -->
  <?php 
-  	header("Refresh:0; url=home1.html");
+  	header("Refresh:0; url=index.html");
  ?>
