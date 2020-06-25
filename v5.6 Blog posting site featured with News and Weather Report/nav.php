@@ -6,41 +6,71 @@
  * Title : Blog posting site featuring with Weather and News report  
  * Version: v5.6
  -->
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <title>UserPage</title>
+
+<head>
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" >
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Rohit Shakya">
-  <meta name="keywords" content="Commment, Map, User, Authentication, Weather, Report, News ">
-  <meta name="title" content="Commment Posting Site">
-  <meta name="description" content="Welcome to our comment posting site. Enjoy!!">
-  <link rel="stylesheet" href="css/mycss.css">
-  <link rel="stylesheet" type="text/css" href="css/search.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  </head><body style="background: white">
-<!-- nav bar-->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+  <meta name="keywords" content="Commment, Post, Blogs, Map, User, Authentication, Weather, Report, News ">
+  <meta name="title" content="Blog Posting Site">
+  <meta name="description" content="Welcome to our Blog posting site. Enjoy!!">
+
+  <title>Blog Post Site | Login</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+  <link href="css/signin.css" rel="stylesheet">
+  <link href="css/signin.css" rel="stylesheet">
+  <link href="css/search.css" rel="stylesheet">
+  <link href="css/mycss.css" rel="stylesheet">
+  <link href="css/shop-item.css" rel="stylesheet">
+  
+  
+
+
+</head>
+
+<body style="background: white">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
       <a class="navbar-brand" href="user.php">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="weather.php"></span> Weather</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="journel.php"></span>My Journel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.php"></span> Log out</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="weather.php">Weather</a></li>
-      <li><a href="news.php">News</a></li>
-     </ul>
-     <ul class="nav navbar-nav navbar-right">
-      <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-    </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
+  
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

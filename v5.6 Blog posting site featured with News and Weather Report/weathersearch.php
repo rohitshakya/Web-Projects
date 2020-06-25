@@ -15,6 +15,7 @@ if(!isset($_SESSION['username']))
 }
 include_once 'nav.php';
 ?>
+<section><br><br>
 <form autocomplete="off" action="/weathersearch.php">
   <div class="autocomplete" style="width:300px;">
     <input id="myInput" type="text" name="myCountry" placeholder="Enter a City Name">
@@ -67,6 +68,6 @@ function showPosition(position) {
 </script>
 
 
-
+</section>
 </body>
 </html>

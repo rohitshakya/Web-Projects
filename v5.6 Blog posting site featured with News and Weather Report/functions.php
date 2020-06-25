@@ -25,18 +25,26 @@ if ($conn->connect_error) {
     echo "connection error";
 } 
    
-  $sql = "SELECT * FROM story WHERE id=$_SESSION[id] ORDER BY title"; //for descending order use "ORDER BY title DESC"
+  $sql = "SELECT * FROM story ORDER BY post_id DESC"; //for descending order use "ORDER BY title DESC"
   $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo  "<h3><strong>".$row["title"]."</strong></h3>". $row["description"]. "<br>Posted by ".ucfirst($_SESSION['username'])." on ". date("d/m/Y")."</small> ";
-      $pid=$row["post_id"];?>
-    <a href='user.php?clearPost=true&num=<?php echo $pid?>'>Delete</a><?php echo "<hr>";
+    echo  "<h3><strong>".$row["title"]."</strong></h3>". $row["description"];
+    
+      $pid=$row["post_id"];
+      $nameid=$row["id"];
+      $qry = "select * from user where user_id=$nameid";
+      $rs = mysqli_query($conn,$qry);
+      $getRow = mysqli_fetch_row($rs);
+      echo "<br>Posted by ".ucfirst($getRow['1']);
+      echo " on ". date("d/m/Y")."</small> ";
   }
-} else {
+}
+ else 
+{
   echo "0 results";
 }
   $conn->close();  
@@ -172,7 +180,51 @@ if ($conn->query($sql) === TRUE) {
 }
   
 $conn->close(); 
-header("Location:user.php"); 
+header("Location:journel.php"); 
 
   }
+
+  function showCommentJournel() {
+
+$servername = "localhost";
+$dbusername = "root";
+$password = "";
+$database="mydb";
+// Create connection
+$conn = new mysqli($servername, $dbusername, $password,$database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    echo "connection error";
+} 
+   
+  $sql = "SELECT * FROM story WHERE id=$_SESSION[id] ORDER BY post_id DESC"; //for descending order use "ORDER BY title DESC"
+  $result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+   echo  "<h3><strong>".$row["title"]."</strong></h3>". $row["description"];
+    
+      $pid=$row["post_id"];
+      $nameid=$row["id"];
+      $qry = "select * from user where user_id=$nameid";
+      $rs = mysqli_query($conn,$qry);
+      $getRow = mysqli_fetch_row($rs);
+      echo "<br>Posted by ".ucfirst($getRow['1']);
+      echo " on ". date("d/m/Y")."</small> ";
+      ?>
+    <a href='user.php?clearPost=true&num=<?php echo $pid?>'>Delete</a><?php echo "<hr>"; 
+  
+      
+      
+  }
+} else {
+  echo "0 results";
+}
+  $conn->close();  
+}
+
 ?>

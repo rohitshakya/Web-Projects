@@ -16,7 +16,7 @@ if(!isset($_SESSION['username']))
 include_once 'nav.php';
 ?>
 
-
+<section><br><br>
 <!--Search Bar Form-->
 <!--Make sure the form has the autocomplete function switched off:-->
 <form autocomplete="off" action="/weathersearch.php">
@@ -57,6 +57,7 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 </script>
+</section>
 
 
 <!--section over-->

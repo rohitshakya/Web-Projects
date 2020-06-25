@@ -66,7 +66,7 @@ else
         
           <div class="card-header">
             <?php
-            showComment();?>
+            showCommentJournel();?>
           </div>
     
           </div>
