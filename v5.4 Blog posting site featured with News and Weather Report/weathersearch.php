@@ -4,7 +4,7 @@
  * Editor : Sublime text
  * Local server: Xampp
  * Title : Blog posting site featuring with Weather and News report  
- * Version: v5.4
+ * Version: v5.6
  -->
 <?php
 session_start(); 
@@ -13,8 +13,9 @@ if(!isset($_SESSION['username']))
 {
   header('Location: home1.html');
 }
-include 'nav.php';
+include_once 'nav.php';
 ?>
+<section><br><br>
 <form autocomplete="off" action="/weathersearch.php">
   <div class="autocomplete" style="width:300px;">
     <input id="myInput" type="text" name="myCountry" placeholder="Enter a City Name">
@@ -39,10 +40,10 @@ $apiKey = "231a533e913c7e004f7ea56e36a67d83";
 $cityId = $json[$country];
 if(!isset($cityId))
 {
-  header('Location: index.php');
+  header('Location: weather.php');
 }
 $googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=metric&APPID=" . $apiKey;
- include'searchbox.php';?>
+ include_once'searchbox.php';?>
 
  <br><strong>
 <button onclick="getLocation()">Get your coordinates</button><br>
@@ -67,6 +68,6 @@ function showPosition(position) {
 </script>
 
 
-
+</section>
 </body>
 </html>
