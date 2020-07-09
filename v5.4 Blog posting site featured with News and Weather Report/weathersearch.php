@@ -21,7 +21,7 @@ include_once 'nav.php';
     <input id="myInput" type="text" name="myCountry" placeholder="Enter a City Name">
   </div>
   <input type="submit">
-</form>
+</form><br>
 <strong>
 <h1><?php
 $country=$_GET['myCountry'];
