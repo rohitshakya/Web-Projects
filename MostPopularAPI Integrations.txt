@@ -1,0 +1,51 @@
+--Most Popular API integrations--
+Skyscanner Flight Search  
+Open Weather Map  
+API-FOOTBALL  
+The Cocktail DB  
+REST Countries v1  
+Yahoo Finance  
+Love Calculator  
+URL Shortener Service  
+NasaAPI  
+Numbers  
+musiXmatch  
+SYSTRAN.io  Translation and NLP  
+Chuck Norris  
+Hearthstone  
+Currency Exchange  
+Breaking News  
+Booking  
+Free NBA  
+Deezer  
+Email Validator  
+Urban Dictionary  
+Pokemon Go  
+Recipe  Food  Nutrition  
+Investors Exchange (IEX) Trading  
+Movie Database (IMDB Alternative)  
+webcams.travel  
+City Geo-Location Lookup  
+Temp Mail  
+uNoGS  
+WordsAPI  
+GeoDB Cities  
+Crime Data  
+Kajak  
+Chicken Coop  
+Joke  
+OpenAPI 1.2  
+Text-to-Speech  
+vin-decoder  
+Cricket Live Scores  
+Youtube To Mp3 Download  
+Web Search  
+JokeAPI  
+Genius  
+Nexmo SMS Messaging API  
+Currency Converter  
+TheRundown  
+BrainShop.AI  
+Utelly  
+Flight Data  
+Crypto Asset Tickers  
