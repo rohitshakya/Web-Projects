@@ -1,0 +1,16 @@
+### EcartBooks An E-commerce website for online book selling 
+
+USER LOGIN:
+
+Username: rohitshakya
+Password: ketikarohi
+
+
+>>FOR ADMIN PANEL GO TO (http://localhost/ecartbooks/pages/admin_panel.php)
+OR SIMPLY LOGIN AS USER, YOU'LL SEE 'ADMIN PANEL' OPTION IN NAVIGATION BAR. IT WILL REDIRECT YOU TO ADMIN PANEL
+
+DON'T FORGET TO CREATE A DATABASE NAMING "eshop" AND IMPORT THE SQL FILE.
+WITHOUT THE DATABASE THE PROJECT WON'T RUN.
+
+>>DATABASE FILE IS INSIDE "DATABASE" FOLDER!
+>>FEEL FREE TO CONTACT FOR DATABASE AND OTHER FILES: rohit.rkshakya@gmail.com

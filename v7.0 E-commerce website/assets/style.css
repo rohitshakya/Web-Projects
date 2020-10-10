@@ -1,0 +1,73 @@
+body {padding-top: 0;}
+a, a:hover{color:#444;}
+.clr{clear:both;}
+.navbar-fixed-top, .navbar-fixed-bottom {position: relative;}
+#header{padding:8px 0 4px; border-bottom:4px solid #444;margin-bottom:14px }
+#header a{text-decoration:none; color:#444;}
+#logoM{float:left;}
+.thumbnail img{ max-width:100%}
+.thumbnail:hover{ -webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0; border:1px solid #eee}
+.thumbnail h4{line-height:42px}
+hr.soften {margin: 8px 0 4px; background:#ddd;}
+/* Fade in fade out transition  */
+#srchFld {background: url(assets/img/search.png) no-repeat right center;border-radius: 0;padding: 4px;margin: 0;line-height: 16px;}
+#myCarousel .btn{position:absolute; bottom:10%; right:17%; padding:2% 6%; z-index:9999}
+#myCarousel .carousel-caption{display:none;}
+#myCarousel.homCar .item img{width:100%; max-height:506px}
+#productView .btn-toolbar{padding-left:3px;}
+#productDetail > li, .nav-pills > li {float: right;}
+#myTabContent{text-align:justify}
+#compairTbl td{text-align:center;}
+#accordion2, #legalNotice, .justify, #mainCol{text-align:justify}
+.carousel .item {-webkit-transition: opacity 3s; -moz-transition: opacity 3s; -ms-transition: opacity 3s; -o-transition: opacity 3s; transition: opacity 3s;}
+.carousel .active.left {left:0;opacity:0;z-index:2;}
+.carousel .next {left:0;opacity:1;z-index:1;}
+.navbar-inner {padding-left: 0;padding-right: 0;}
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {color: white;background-color: #CF0007;text-shadow: none;}
+/* Sidebar--------- */
+#sidebar .bs-docs-sidenav > li > a {border: 0; }
+#sidebar ul{margin-top:0px; padding:0}
+#sidebar ul i {  border-bottom:1px solid #e5e5e5; }
+#sidebar ul li a.dropdown-toggle.collapsed{background-image: url("assets/img/arrowR.png");background-color:transparent; }
+#sidebar ul li a.dropdown-toggle{background-image: url("assets/img/arrowD.png"); background-color:#F8F8F8;}
+#sidebar ul li a{background-image: url("assets/img/arrowR.png"); border-radius:0;  padding-left:24px;background-position: 6px center;background-repeat: no-repeat;}
+#sidebar ul ul{ padding:0; margin:0; list-style:none;font-size:12px; background:#F8F8F8; display:none;}
+#sidebar ul ul li{padding:0 14px; border-bottom:1px solid #e5e5e5; }
+#sidebar ul li li {border-bottom:0; border-top:1px solid #e5e5e5;}
+#sidebar ul li li a{padding-top:4px; padding-bottom:4px; display:block;}
+#sidebar ul li a.active{font-weight:bold; color:#CF0007;}
+.form-horizontal.qtyFrm .control-label{text-align: left;}
+.form-horizontal.qtyFrm .control-label span{font-size:18px}
+.moreOptopm.carousel .item img{padding:2px; border:1px solid #ddd}
+.moreOptopm.carousel .item img:hover{ border:1px solid pink}
+.carousel .item > img {display:inline;}
+.btn.active{color: white;background-color: #CF0007;text-shadow: none;}
+/* Product page--- */
+.alignR{text-align:right;}
+.control-label.alignL, .alignL{text-align:left;}
+.loginFrm{ margin-bottom:8px;}
+.loginFrm .control-group{padding:8px 14px 0; margin-bottom:0 }
+.marginLess{margin:0}
+.cntr{text-align:center}
+.cart{border:1px solid #ddd;}
+.thumbnail>a{display:block; text-align:center}
+.thumbnail h5,.thumbnail p{text-align:center}
+.thumbnail{background:#fff;}
+.thumbnail {position:relative;border: 1px solid white;}
+/* Compair product page */
+.table td[align=right] {text-align: right;}
+.tag {background:url(assets/img/new.png) no-repeat 0 0; position: absolute; display:block; top: -4px;right: -18px; height:48px; width:48px;}
+.bs-docs-sidenav .icon-chevron-right {float: left;margin-top: 2px;margin-right: 6px;opacity: .25;}
+.checkbox input[type="checkbox"]{float:right; margin:4px 0 8px 8px }
+#sm{text-align:right}
+#sm a {margin: 4px;width:32px;}
+.bs-docs-sidenav,.btn,
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],
+input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"],
+input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;}
+/* Footer section--------------- */
+#footerSection a{font-size:11px; padding:0 13px; line-height:24px; display:block; }
+#footerSection a:hover{background:#eee;  }
+#footerSection  #socialMedia a{ min-width:25px; display:inline; margin-right:6px; text-align:center; line-height:1.5em;}
+#footerSection  #socialMedia a:hover{background:none;}
+/* ===================================================== */
