@@ -1,7 +1,7 @@
 ### v5.6 Blog posting site featured with News, Weather and Coordinates Report
 ### Install Xampp for project php  
 
-[Click here to view](http://blogpostsite.epizy.com/)  
+[Click here to view](http://blogpostsite.epizy.com/)  <!--infinityfree.com-->
 
 * For phpmyadmin, sql and apache.
 * For database creation and manipulation
