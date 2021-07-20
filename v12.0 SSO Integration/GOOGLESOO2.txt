@@ -1,0 +1,38 @@
+<!-- 
+
+
+
+<script type="text/javascript">
+        var clicked = false; //Global Variable
+        function ClickLogin() {
+            clicked = true;
+        }
+
+        function onSignIn(googleUser) {
+            if (clicked) {
+
+                let profile = googleUser.getBasicProfile();
+                let id_token = googleUser.getAuthResponse().id_token;
+                let xhr = new XMLHttpRequest();
+                xhr.open('POST', '<?php //echo base_url('/tokensignin'); ?>');
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onload = function() {
+                    console.log('Signed in as: ' + xhr.responseText);
+                    if (xhr.responseText == "Logged in successfully") {
+                        $('#myModal').modal('hide');
+
+                        location.reload();
+                    } else if (xhr.responseText == "Unverified email") {
+                        alert("Verify your email or login with default form!")
+                    } else if (xhr.responseText == "Unverified email" || xhr.responseText == "Invalid ID token") {
+                        alert(xhr.responseText);
+                        alert("Something went wrong");
+                    } else {
+                        $('#myModal').modal('hide');
+                        location.href = "<?= //base_url() ?>/school/selfupdateprofile?id=" + xhr.responseText;
+                    }
+                };
+                xhr.send('idtoken=' + id_token);
+            }
+        }
+    </script> -->
