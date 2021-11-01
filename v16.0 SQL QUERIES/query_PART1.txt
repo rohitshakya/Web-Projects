@@ -1,0 +1,19 @@
+SELECT * from period inner join period_student_assignment on period_student_assignment.pid=period_id inner join reports on reports.userid=period_student_assignment.sid and reports.subject=period.subject_id and reports.class=period.class where period_id=2
+
+SELECT sum(total_attempt),sum(right_attempt),act_type FROM `reports` where userid=3 group by act_type
+
+SELECT month,module, sum(total_attempt),sum(right_attempt),act_type FROM `reports` INNER join question on question.id=reports.setId where userid=3 and month=1 group by month
+
+SELECT month, module,m_name,act_type, sum(total_attempt),sum(right_attempt) FROM `reports` INNER join question on question.id=reports.setId inner join master_module on master_module.m_id=question.module where userid=3 and question.month=3 group by module,act_type
+
+select month, module,m_name,act_type, sum(total_attempt),sum(right_attempt) from period INNER join period_student_assignment on period.period_id=period_student_assignment.pid inner join reports on reports.userid=period_student_assignment.sid and reports.class=period.class and reports.subject=period.subject_id INNER join question on question.id=reports.setId inner join master_module on master_module.m_id=question.module where period_id=3 and question.month=3 group by module,act_type
+
+SELECT DISTINCT(type) FROM `list` inner join question on question.id=list.set_id where module=1 and month=1
+
+  $student_result_row=$this->db->query("SELECT DISTINCT(type),module FROM `list` inner join question on question.id=list.set_id where module in (1,5) and month=1 and class=3 and subject=7 and month=1")->getResult();
+
+  SELECT sum(total_attempt), sum(right_attempt) FROM `reports` inner join question on question.id=reports.setId where userid=17 and reports.class=3 and reports.subject=7 and month=1
+  
+SELECT vt_premium_package_order.product_class,vt_premium_package_order.product_sub FROM `vt_useraccount` a, vt_useraccount b inner join vt_premium_package_order on vt_premium_package_order.vc_user=b.vc_id where a.vc_id=15 and a.vc_school=b.vc_school and b.vc_usertype="admin" and vt_premium_package_order.vc_package_status="Active"
+
+SELECT b.* FROM period a,period b where a.period_id<>b.period_id and a.class=b.class and a.subject_id=b.subject_id and a.period_id in (2,4)
