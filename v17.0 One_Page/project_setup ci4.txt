@@ -1,0 +1,16 @@
+composer create-project codeigniter4/appstarter project-root
+
+composer update
+
+go to the project folder and run the command "php spark serve"
+
+app setting db name n all
+
+put the index.php and htdocs file of the public folder outside the folder folder
+
+update the following in index.php 
+
+require realpath(FCPATH . 'app/Config/Paths.php') ?: FCPATH . '../app/Config/Paths.php';
+to
+
+require realpath(FCPATH . 'app/Config/Paths.php') ?: FCPATH . 'app/Config/Paths.php';
