@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clip Path Size Convertor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <label for="clippathinput">Enter the value</label><br/>
+    <textarea
+      id="clippathinput"
+      name="clippathinput"
+      rows="4"
+      cols="50"
+    ></textarea>
+    <div id="output"></div>
+    <button id="submitbutton">submit</button>
+    <script>
+      $(document).ready(function () {
+        $("#submitbutton").click(function () {
+            let newArray=[];
+            let newArray2=[];
+         var string=$("#clippathinput").val();   
+        const myArray = string.split(" ");
+        console.log(myArray);
+        let it=0;
+        myArray.forEach(element => {
+            if(it%2==0)
+            {
+                 newArray[it++] = element.substring(0, element.length - 1)*100;
+            }
+            else
+            {
+                 newArray[it++] = element.substring(0, element.length - 2)*100;
+            }
+        });
+         newArray.forEach(element => {
+            if(it%2==0)
+            {
+                 newArray2[it++] = element+'%';
+            }
+            else
+            {
+                newArray2[it++] = element+'%#';
+            }
+        });
+        var myJsonString = JSON.stringify(newArray2);
+        $("#output").html(newArray2);
+         console.log(myJsonString);
+        });
+      });
+    </script>
+  </body>
+</html>

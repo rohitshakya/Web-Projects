@@ -1,0 +1,14 @@
+Take a svg image of the given shape.
+Get the value of d(parameter from the svg image)
+Convert the absolute path into relative path with remove offset 
+	https://yoksel.github.io/relative-clip-path/
+Convert the relative path into clip-path polygon
+	https://path-to-points.netlify.app/
+Copy the clippath polygon value and paste into the given conversion file
+	clippathSizeConvertor.html
+
+Paste the code with css class in css file like this:
+	
+	.polycurve{
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 50% 100%, 100% 50%, 50% 0);
+	}
