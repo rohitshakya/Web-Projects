@@ -1,0 +1,37 @@
+search keyword on google search upto hundred pages
+use scrapper extention to fetch similar data
+use description and copy the same for keyword
+paste keyword in to excel and do the following
+
+
+Option Explicit
+Sub RemoveSeparators()
+' stanleydgromjr, 07/06/2012
+' https://www.excelforum.com/excel-general/843375-removing-stop-words-from-a-sentence-in-excel.html'
+Dim s, b
+Dim i As Long, ii As Long, lr As Long, h As String
+s = Array("this ", "This ", "is ", "Is ", "of ", "Of ", "I ", "i ", "have ", "Have ", "and ", "And ", "from ", "From ", "a ", "A ", "the ", "The ", "it ", "It ", "over ", "Over ", "it's ", "It's ", "has ", "Has ", "that ", "That ", "coming ", "Coming ", "january ", "february ", "march ", "april ", "may ", "june ", "july ", "august ", "september ", "october ", "november ", "december ", "January ", "February ", "March ", "April ", "May ", "June ", "July ", "August ", "September ", "October ", "November ", "December ", "Jan ", "Feb ", "Mar ", "Apr ", "May ", "Jun ", "Jul ", "Aug ", "Sep ", "Oct ", "Nov ", "Dec ")
+lr = Cells(Rows.Count, 2).End(xlUp).Row
+b = Range("B2:C" & lr).Value
+For i = LBound(b, 1) To UBound(b, 1)
+  h = Trim(b(i, 1))
+  If Right(h, 1) = "." Then h = Left(h, Len(h) - 1)
+  For ii = LBound(s) To UBound(s)
+    h = Replace(h, s(ii), "")
+  Next ii
+  b(i, 2) = h
+Next i
+Range("B2:C" & lr).Value = b
+End Sub
+
+
+alt f11
+alt i
+m
+ctrl v
+alt q
+alt f8
+remove seperator do run
+get data from c coloumn
+http://www.find-keyword.com/
+ctrl v
