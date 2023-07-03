@@ -1,0 +1,30 @@
+<?php 
+
+$handle = fopen("inputfile.txt", "r");
+if ($handle) {
+    while (($line = fgets($handle)) !== false) {
+        // process the line read.
+    }
+
+    fclose($handle);
+}
+
+
+?>
+
+<?php 
+$LATEST='$LATEST';
+ $arr=array( "||  37645960910470925377258796526578435930323254999299588099|  1688103277482 |  2023/06/30/[$LATEST]7256588157bb4851bd61a525be3c5f0e |  [ERROR]    2023-06-30T05:34:30.780Z    eec536cd-4366-4ac5-85b5-1323d4544a8e    Sample ERROR log"
+  , "||  37646144370584202436430245059596980252630800235337940995|  1688111501463 |  2023/06/30/[$LATEST]1a8f478955ab416d80b5fbdc06dad9ea |  [ERROR]    2023-06-30T07:51:37.416Z    e1cd378f-6ed4-4795-b1bf-5731542f7ca2    Sample ERROR log" );
+foreach ($arr as $key => $haystack) 
+{
+  $needle   = '2023/06/30'; 
+  if (strpos($haystack, $needle)) 
+  {     
+    echo $haystack."<br>"; 
+
+  }     
+} 
+
+
+?>
